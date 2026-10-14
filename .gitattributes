@@ -1,0 +1,18 @@
+# Windows 批处理必须保持 CRLF。
+#
+# LF 换行的 .cmd 会被 cmd.exe 逐行错位解析，双击直接报一堆
+# "不是内部或外部命令"。
+#
+# 用 `-text`（不当作文本、不做行尾规范化），而不是 `text eol=crlf`：
+# 后者的语义是「索引里存 LF、检出时转 CRLF」，只能保证 git clone 拿到 CRLF，
+# 而 GitHub 的 Download ZIP 给的是仓库里的原始字节。`-text` 会把 CRLF
+# 原样存进仓库，于是 clone / Download ZIP / 打 zip 三条路都是 CRLF。
+*.cmd -text
+*.bat -text
+
+# 二进制不要做任何转换
+*.wav binary
+*.onnx binary
+*.png binary
+*.jpg binary
+*.gif binary

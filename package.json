@@ -1,0 +1,52 @@
+{
+  "name": "dsh-voice-doubao",
+  "version": "1.0.0",
+  "description": "Adds two Volcengine Doubao cloud speech recognizers to the DeepSeek Harness voice-input picker, optionally rewriting the transcript with an LLM. / 给 DeepSeek Harness 的语音输入加入两个豆包云端识别器，可选再用大模型把口语顺成通顺的书面句子。",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib",
+    "test",
+    "cordis.patch.yml",
+    "install.mjs",
+    "doctor.mjs",
+    "probe-resources.mjs",
+    "安装.cmd",
+    "体检.cmd",
+    "使用说明.md",
+    "技术说明.md",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "install-plugin": "node install.mjs",
+    "doctor": "node doctor.mjs",
+    "test": "node test/offline.test.mjs"
+  },
+  "meta": {
+    "title": "豆包语音输入（云端识别）",
+    "description": "在语音输入里增加云端识别器：豆包听写、以及带大模型顺稿的版本。"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "speech-to-text",
+    "voice-input",
+    "doubao",
+    "volcengine"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "ws": "^8.22.0"
+  }
+}

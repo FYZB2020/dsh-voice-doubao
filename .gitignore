@@ -1,0 +1,16 @@
+# 依赖：从仓库安装时由 pnpm 装；只有打 zip 时才需要它一起带走
+node_modules/
+
+# 打包产物
+dist/
+*.tgz
+*.zip
+
+# 本地日志与系统文件
+*.log
+.DS_Store
+Thumbs.db
+
+# 密钥绝不能进仓库
+voice-doubao.json
+.env

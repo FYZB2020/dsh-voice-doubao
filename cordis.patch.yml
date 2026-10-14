@@ -1,0 +1,7 @@
+# dsh-voice-doubao bundle layer: adds two cloud recognizers to the speech-to-text
+# service. The rows land next to the shipped ones (`speech-to-text`,
+# `speech-to-text-sensevoice`); the user picks one in the microphone's provider
+# selector, and the choice is persisted by the `speech-to-text` service.
+- insert:
+    - id: speech-to-text-doubao
+      name: dsh-voice-doubao
