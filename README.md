@@ -134,7 +134,6 @@ test/                 offline suite + a mock service + a live check + a benchmar
 install.mjs           link the plugin into a profile and register it
 doctor.mjs            read-only health check: what's missing and what to do
 probe-resources.mjs   which Volcengine speech resources your key can actually use
-tools/make-package.mjs builds the distributable zip
 使用说明.md            step-by-step guide in Chinese
 技术说明.md            engineering deep-dive: protocol, pitfalls, measurements
 ```
@@ -269,7 +268,6 @@ test/                 离线套件 + 假服务 + 真实检查 + 基准脚本
 install.mjs           把插件链接进 profile 并登记
 doctor.mjs            只读体检：缺什么、下一步做什么
 probe-resources.mjs   你这个 Key 到底能用哪些资源
-tools/make-package.mjs 打可发布的 zip
 使用说明.md            中文一步步安装手册
 技术说明.md            工程向深文档：协议、坑、实测数据
 ```
